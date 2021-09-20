@@ -4,7 +4,9 @@ require("dotenv").config({ path: ".env" });
 require('./database/database');
 
 const app = express();
-const PORT = process.env.PORT || process.env.SERVER_PORT;
+const PORT = process.env.PORT || 4000;
+
+console.log("process.env.PORT:", process.env.PORT)
 
 app.use(cors());
 app.use(express.json({ extended: true }));
